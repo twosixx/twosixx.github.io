@@ -1,0 +1,71 @@
+/* Define estilos para a seção de introdução */
+.introducao {
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Layout de duas colunas com proporções 1:2 */
+    gap: 100px; /* Espaçamento entre as colunas */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+  }
+  
+  /* Estilos para o título na seção de introdução */
+  .introducao h1 {
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  /* Adiciona um detalhe visual ao título usando um pseudo-elemento ::before */
+  .introducao h1::before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url("../img/detalhe.svg") no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    z-index: -1; /* Define a camada z-index para colocar o detalhe atrás do texto */
+  }
+  
+  /* Estilos para o parágrafo na seção de introdução */
+  .introducao p {
+    font-size: 1.5rem;
+    color: #525252;
+  }
+  
+  /* Estilos para telas menores ou iguais a 1000px de largura */
+  @media (max-width: 1000px) {
+    .introducao h1 {
+      font-size: 3rem; /* Reduz o tamanho do título */
+    }
+  }
+  
+  /* Estilos para telas menores ou iguais a 800px de largura */
+  @media (max-width: 800px) {
+    .introducao {
+      grid-template-columns: 1fr 1fr; /* Muda para layout de duas colunas iguais */
+      gap: 40px; /* Reduz o espaçamento entre as colunas */
+    }
+    .introducao h1 {
+      font-size: 2rem; /* Reduz ainda mais o tamanho do título */
+    }
+    .introducao h1::before {
+      width: 30px;
+      height: 10px;
+      left: 0px; /* Modifica o detalhe visual para um tamanho menor e ajusta a posição */
+    }
+  }
+  
+  /* Estilos para telas menores ou iguais a 400px de largura */
+  @media (max-width: 400px) {
+    .introducao {
+      grid-template-columns: 1fr; /* Muda para layout de uma única coluna */
+    }
+    .introducao img {
+      display: none; /* Esconde a imagem quando a largura da tela é menor ou igual a 400px */
+    }
+  }
+  

@@ -1,0 +1,46 @@
+/* Define o estilo para o corpo do documento */
+body {
+    font-family: 'Fira Sans', Arial, sans-serif; /* Define a família de fontes para o corpo do documento, dando preferência à 'Fira Sans' e, em seguida, a Arial e fontes genéricas sans-serif. */
+    margin: 0px; /* Define a margem do corpo como 0 pixels. */
+    color: #141414; /* Define a cor do texto como #141414, que é uma tonalidade escura. */
+}
+
+/* Define o estilo para parágrafos, títulos h1, h2 e h3 */
+p,
+h1,
+h2,
+h3 {
+    margin: 0px; /* Define a margem para parágrafos, títulos h1, h2 e h3 como 0 pixels. */
+}
+
+/* Define o estilo para listas não ordenadas (ul) */
+ul {
+    margin: 0px; /* Define a margem para listas não ordenadas como 0 pixels. */
+    padding: 0px; /* Define o preenchimento interno para listas não ordenadas como 0 pixels. */
+    list-style: none; /* Remove os marcadores de lista padrão. */
+}
+
+/* Define o estilo para imagens */
+img {
+    max-width: 100%; /* Define a largura máxima da imagem como 100% do contêiner pai. */
+    height: auto;
+    display: block; /* Define a exibição da imagem como bloco para evitar espaçamento indesejado. */
+}
+
+/* Estilo para o subtítulo da seção de experiência */
+.subtitulo {
+    font-size: 8rem;  /* Tamanho da fonte do subtítulo. */
+    line-height: 1;  /* Espaçamento entre as linhas igual à altura da própria linha. */
+    text-transform: uppercase;  /* Converte todo o texto para letras maiúsculas. */
+    word-break: break-all;  /* Quebra as palavras para evitar overflow em contêineres pequenos. */
+    max-width: 4ch;  /* Limita a largura do subtítulo para melhor legibilidade. */
+}
+
+/* Estilo para telas menores que 800px na seção de experiência */
+@media (max-width: 800px) {
+    .subtitulo { 
+        font-size: 3rem;  /* Reduz o tamanho da fonte do subtítulo em telas menores que 800px. */
+        text-transform: capitalize;  /* Converte a primeira letra de cada palavra para maiúscula. */
+        max-width: initial !important;  /* Remove a limitação de largura do subtítulo. */
+    }
+}

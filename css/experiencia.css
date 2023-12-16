@@ -1,0 +1,124 @@
+/* Estilo para a seção de experiência */
+.experiencia {
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;  /* Divide a seção em duas colunas, sendo uma para o texto e outra para as empresas. */
+    gap: 100px;  /* Espaçamento entre as colunas. */
+}
+
+/* Estilo para o subtítulo da seção de experiência */
+.experiencia .subtitulo {
+    color: #e0e0e0;  /* Cor do subtítulo. */
+}
+
+/* Estilo para o texto de experiência */
+.experiencia-texto {
+    font-size: 1.5rem;
+    line-height: 1.33;
+    max-width: 40ch;  /* Limita a largura do texto para melhor legibilidade. */
+    margin-bottom: 60px;
+    color: #525252;  /* Cor do texto. */
+}
+
+/* Estilo para texto forte dentro do texto de experiência */
+.experiencia-texto strong {
+    color: #141414;  /* Cor do texto forte. */
+}
+
+/* Estilo para cada bloco de informações de uma empresa */
+.empresa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Divide o bloco da empresa em duas colunas, uma para o ano e outra para as informações. */
+    gap: 10px 20px;  /* Espaçamento interno do bloco da empresa. */
+    padding: 20px;  /* Preenchimento interno do bloco da empresa. */
+    background: #f5f5f5;  /* Cor de fundo do bloco da empresa. */
+    margin-bottom: 20px;  /* Margem inferior do bloco da empresa. */
+    border-radius: 4px;  /* Borda arredondada do bloco da empresa. */
+    position: relative;
+}
+
+/* Estilo para adicionar uma linha vertical ao lado de cada bloco de informações da empresa */
+.empresa::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#b6f829, #67dd0a);  /* Gradiente vertical ao lado do bloco da empresa. */
+    position: absolute;
+    top: 20px;
+    left: -4px;
+}
+
+/* Estilo para o ano de cada empresa */
+.empresa-ano {
+    position: absolute;
+    top: 22px;
+    left: -100px;  /* Posicionamento do ano em relação à empresa. */
+    text-align: right;
+    width: 80px;
+    color: #525252;  /* Cor do ano. */
+    font-size: 0.875rem;  /* Tamanho da fonte do ano. */
+}
+
+/* Estilo para o título da empresa */
+.empresa-titulo {
+    font-size: 1.125rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+/* Estilo para o texto de descrição da empresa */
+.empresa-texto {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #525252;  /* Cor do texto de descrição. */
+}
+
+/* Estilo para a lista de habilidades da empresa */
+.empresa-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;  /* Espaçamento entre as habilidades. */
+    align-content: start;
+}
+
+/* Estilo para cada habilidade na lista de habilidades da empresa */
+.empresa-habilidades li {
+    font-size: .875rem;
+    line-height: 1.4;
+    border-radius: 4px;
+    background: #fff;  /* Cor de fundo das habilidades. */
+    padding: 5px 10px;  /* Preenchimento interno das habilidades. */
+}
+
+/* Estilo para telas menores que 800px na seção de experiência */
+@media (max-width: 800px) {
+    .experiencia {
+        grid-template-columns: 1fr;  /* Altera para uma única coluna em telas menores que 800px. */
+        gap: 40px;  /* Aumenta o espaçamento entre os blocos. */
+    }
+    .experiencia .subtitulo {
+        color: #141414;  /* Muda a cor do subtítulo. */
+    }
+    .experiencia-texto {
+        font-size: 1.25rem;  /* Reduz o tamanho da fonte do texto de experiência. */
+    }
+    .empresa-ano {
+        position: initial;  /* Restaura o posicionamento do ano. */
+        order: 1;  /* Altera a ordem dos elementos. */
+        width: initial;
+        text-align: left;
+    }
+    .empresa-ano::before {
+        content: "Ano: ";  /* Adiciona um prefixo "Ano: " ao ano. */
+    }
+}
+
+/* Estilo para telas menores que 400px na seção de empresa */
+@media (max-width: 400px) {
+    .empresa {
+        grid-template-columns: 1fr;  /* Altera para uma única coluna em telas menores que 400px. */
+    }
+}

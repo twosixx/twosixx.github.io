@@ -1,0 +1,17 @@
+/* Importa o conteúdo do arquivo CSS "global.css", que contém estilos globais para todo o projeto. */
+@import './global.css';
+
+/* Importa o conteúdo do arquivo CSS "header.css", que provavelmente contém estilos específicos para o cabeçalho do site. */
+@import './header.css';
+
+/* Importa o estilo do arquivo 'introducao.css' */
+@import './introducao.css';
+
+/* Importa o estilo do arquivo 'experiencia.css' */
+@import './experiencia.css';
+
+/* Importa o estilo do arquivo 'formacao.css' */
+@import './formacao.css';
+
+/* Importa o estilo do arquivo 'footer.css' */
+@import './footer.css';
